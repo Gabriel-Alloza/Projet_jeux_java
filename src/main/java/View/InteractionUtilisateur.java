@@ -21,8 +21,8 @@ public class InteractionUtilisateur {
             return true;
         }
 
-        int X = sc.nextInt();
-        if(X>=size || X<0){
+        int x = sc.nextInt();
+        if(x>=size || x<0){
             view.mauvaiseEntree();
             return true;
         }
@@ -34,14 +34,14 @@ public class InteractionUtilisateur {
             sc.next();
             return true;
         }
-        int Y = sc.nextInt();
-        if(Y>=size || Y<0){
+        int y = sc.nextInt();
+        if(y>=size || y<0){
             view.mauvaiseEntree();
             return true;
         }
 
-        if(cells[X][Y].getRepresentation().equals("   ")){
-            cells[X][Y].setRepresentation(player.getRepresentation());
+        if(cells[x][y].getRepresentation().equals("   ")){
+            cells[x][y].setRepresentation(player.getRepresentation());
         }
         else{
             view.caseOccupe();
@@ -62,7 +62,7 @@ public class InteractionUtilisateur {
         return choice;
     }
 
-    public String Inputsymbol(){
+    public String inputsymbol(){
         Scanner sc = new Scanner(System.in);
         String symbol = sc.nextLine();
         return " " + symbol + " ";

@@ -5,7 +5,7 @@ public class Cell {
     private String representation;
 
 
-    public Cell(String representation){
+    public Cell(String representation) {
         this.representation = representation;
     }
 

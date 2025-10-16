@@ -3,7 +3,6 @@ import Model.Cell;
 import View.View;
 import View.InteractionUtilisateur;
 import Model.Player;
-import org.w3c.dom.css.ViewCSS;
 
 
 public class GameController {
@@ -13,7 +12,7 @@ public class GameController {
 
     public void displayBoard(int longueur, Cell[][] cells, int largeur){
         View view = new View();
-        view.displayboard(longueur, cells, largeur);
+        view.displayBoard(longueur, cells, largeur);
     }
 
     public boolean getMove(int taille, Cell[][] cells, Player player){
@@ -26,12 +25,12 @@ public class GameController {
         return interaction.play();
     }
 
-    public void J1(){
+    public void j1(){
         View view = new View();
         view.j1();
     }
 
-    public void J2(){
+    public void j2(){
         View view = new View();
         view.j2();
     }

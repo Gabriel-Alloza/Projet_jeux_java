@@ -1,6 +1,5 @@
 package Model;
 import View.View;
-import View.InteractionUtilisateur;
 import Controller.GameController;
 
 public class TicTacToe {
@@ -106,40 +105,40 @@ public class TicTacToe {
     public void play(){
         View view = new View();
         GameController gameController = new GameController();
-        boolean is_over = isOver();
+        boolean isOver = isOver();
         //controller appelle interaction.play()
         String choice = gameController.play();
 
-        while(!is_over){
+        while(!isOver){
             if(choice.equals("PVP")){
-                boolean P1_ok = false;
-                while(!P1_ok) {
+                boolean p1Ok = false;
+                while(!p1Ok) {
 
                     display();
                     //controller appellle view
-                    gameController.J1();
+                    gameController.j1();
 
                     if (!getMoveFromPlayer(player1)) {
-                        P1_ok = true;
-                        is_over = isOver();
+                        p1Ok = true;
+                        isOver = isOver();
                     }
 
                 }
-                if(is_over){
+                if(isOver){
                     continue;
                 }
 
-                boolean P2_ok = false;
-                while(!P2_ok){
+                boolean p2Ok = false;
+                while(!p2Ok){
 
                     display();
 
                     //controller appelle J2
-                    gameController.J2();
+                    gameController.j2();
 
                     if(!getMoveFromPlayer(player2)){
-                        P2_ok = true;
-                        is_over = isOver();
+                        p2Ok = true;
+                        isOver = isOver();
                     }
 
                 }
@@ -149,35 +148,35 @@ public class TicTacToe {
 
 
             else if(choice.equals("PVE")){
-                boolean P1_ok = false;
+                boolean p1Ok = false;
 
-                while(!P1_ok) {
+                while(!p1Ok) {
 
                     display();
                     // controller appelle J1
-                    gameController.J1();
+                    gameController.j1();
                     if (!getMoveFromPlayer(player1)) {
-                        P1_ok = true;
-                        is_over = isOver();
+                        p1Ok = true;
+                        isOver = isOver();
                     }
 
                 }
-                if(is_over){
+                if(isOver){
                     continue;
                 }
 
-                boolean P2_ok = false;
-                int P2_movex = (int)(Math.random()*this.size-1);
-                int P2_movey = (int)(Math.random()*this.size-1);
-                while(!P2_ok){
-                    if(this.cells[P2_movex][P2_movey].getRepresentation().equals("   ")){
-                        P2_ok = true;
-                        this.cells[P2_movex][P2_movey].setRepresentation(player2.getRepresentation());
-                        is_over = isOver();
+                boolean p2Ok = false;
+                int p2MoveX = (int)(Math.random()*this.size-1);
+                int P2MoveY = (int)(Math.random()*this.size-1);
+                while(!p2Ok){
+                    if(this.cells[p2MoveX][P2MoveY].getRepresentation().equals("   ")){
+                        p2Ok = true;
+                        this.cells[p2MoveX][P2MoveY].setRepresentation(player2.getRepresentation());
+                        isOver = isOver();
                     }
                     else{
-                        P2_movex = (int)(Math.random()*this.size-1);
-                        P2_movey = (int)(Math.random()*this.size-1);
+                        p2MoveX = (int)(Math.random()*this.size-1);
+                        P2MoveY = (int)(Math.random()*this.size-1);
                     }
                 }
 
@@ -189,34 +188,34 @@ public class TicTacToe {
                 display();
 
                 boolean P1_ok = false;
-                int P1_movex = (int)(Math.random()*this.size-1);
-                int P1_movey = (int)(Math.random()*this.size-1);
+                int P1MoveX = (int)(Math.random()*this.size-1);
+                int P1MoveY = (int)(Math.random()*this.size-1);
                 while(!P1_ok){
-                    if(this.cells[P1_movex][P1_movey].getRepresentation().equals("   ")){
+                    if(this.cells[P1MoveX][P1MoveY].getRepresentation().equals("   ")){
                         P1_ok = true;
-                        this.cells[P1_movex][P1_movey].setRepresentation(player2.getRepresentation());
-                        is_over = isOver();
+                        this.cells[P1MoveX][P1MoveY].setRepresentation(player2.getRepresentation());
+                        isOver = isOver();
                     }
                     else{
-                        P1_movex = (int)(Math.random()*this.size-1);
-                        P1_movey = (int)(Math.random()*this.size-1);
+                        P1MoveX = (int)(Math.random()*this.size-1);
+                        P1MoveY = (int)(Math.random()*this.size-1);
                     }
                 }
 
 
 
-                boolean P2_ok = false;
-                int P2_movex = (int)(Math.random()*this.size-1);
-                int P2_movey = (int)(Math.random()*this.size-1);
-                while(!P2_ok){
-                    if(this.cells[P2_movex][P2_movey].getRepresentation().equals("   ")){
-                        P2_ok = true;
-                        this.cells[P2_movex][P2_movey].setRepresentation(player2.getRepresentation());
-                        is_over = isOver();
+                boolean p2Ok = false;
+                int P2MoveX = (int)(Math.random()*this.size-1);
+                int P2MoveY = (int)(Math.random()*this.size-1);
+                while(!p2Ok){
+                    if(this.cells[P2MoveX][P2MoveY].getRepresentation().equals("   ")){
+                        p2Ok = true;
+                        this.cells[P2MoveX][P2MoveY].setRepresentation(player2.getRepresentation());
+                        isOver = isOver();
                     }
                     else{
-                        P2_movex = (int)(Math.random()*this.size-1);
-                        P2_movey = (int)(Math.random()*this.size-1);
+                        P2MoveX = (int)(Math.random()*this.size-1);
+                        P2MoveY = (int)(Math.random()*this.size-1);
                     }
                 }
                 //controller view.nextTurn
@@ -225,7 +224,7 @@ public class TicTacToe {
             else{
                 //controller view.mauvaiseSaisie()
                 gameController.mauvaiseSaisie();
-                is_over = true;
+                isOver = true;
             }
         }
 

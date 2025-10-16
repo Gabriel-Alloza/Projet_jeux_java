@@ -8,9 +8,9 @@ public class View {
 
     }
 
-    public void displayboard(int size, Cell[][] cells, int longsize){
+    public void displayBoard(int size, Cell[][] cells, int longsize){
         InteractionUtilisateur interaction = new InteractionUtilisateur();
-        String dispalyed_cells = "";
+        String dispalyedCells = "";
         String separation = "";
 
         for (int i = 0; i<= longsize; i++){
@@ -19,11 +19,11 @@ public class View {
         for (int i = 0; i<size; i++){
             System.out.println(separation);
             for (int j = 0; j< longsize; j++){
-                dispalyed_cells = dispalyed_cells + "|" + cells[i][j].getRepresentation();
+                dispalyedCells = dispalyedCells + "|" + cells[i][j].getRepresentation();
             }
-            dispalyed_cells += "|";
-            System.out.println(dispalyed_cells);
-            dispalyed_cells = "";
+            dispalyedCells += "|";
+            System.out.println(dispalyedCells);
+            dispalyedCells = "";
         }
     }
 

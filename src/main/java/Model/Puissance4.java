@@ -10,8 +10,16 @@ public class Puissance4 {
     private Player player1;
     private Player player2;
 
+    /**
+     *
+     * @param size
+     * @param longueur
+     * @param player1
+     * @param player2
+     */
 
     public Puissance4(int size, int longueur, Player player1, Player player2){
+
 
         this.player1 = player1;
         this.player2 = player2;
@@ -26,9 +34,10 @@ public class Puissance4 {
         }
     }
 
+
     public void displayBoard(){
         View view = new View();
-        view.displayboard(this.size, this.cells, this.longueur);
+        view.displayBoard(this.size, this.cells, this.longueur);
     }
 
     public boolean hasWon(){
@@ -91,11 +100,16 @@ public class Puissance4 {
         return false;
     }
 
+    /**
+     *
+     * @param player1
+     * @param player2
+     */
     public void play(Player player1, Player player2){
         InteractionUtilisateur interaction = new InteractionUtilisateur();
         View view = new View();
 
-        Player current_player = player2;
+        Player currentPlayer = player2;
         boolean hasWon = hasWon();
 
         boolean inputError = false;
@@ -103,28 +117,28 @@ public class Puissance4 {
             hasWon = hasWon();
 
             if(!inputError){
-                if(current_player == player1){
-                    current_player = player2;
+                if(currentPlayer == player1){
+                    currentPlayer = player2;
                 }
                 else {
-                    current_player = player1;
+                    currentPlayer = player1;
                 }
             }
 
             inputError = false;
             displayBoard();
             view.choixP4();
-            int player_choice = interaction.inputInteger();
-            if(player_choice<0 || player_choice > 6){
+            int playerChoice = interaction.inputInteger();
+            if(playerChoice<0 || playerChoice > 6){
                 view.mauvaiseEntree();
                 inputError = true;
             }
             else
             {
                 for (int row = 5; row >= 0; row--) {
-                    String last = cells[row][player_choice].getRepresentation();
+                    String last = cells[row][playerChoice].getRepresentation();
                     if(last.equals("   ")){
-                        cells[row][player_choice].setRepresentation(current_player.getRepresentation());
+                        cells[row][playerChoice].setRepresentation(currentPlayer.getRepresentation());
                         hasWon = hasWon();
                         break;
                     }

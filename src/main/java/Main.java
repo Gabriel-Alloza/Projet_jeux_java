@@ -9,10 +9,10 @@ public class Main {
         InteractionUtilisateur interaction = new InteractionUtilisateur();
         View view = new View();
         view.j1();
-        String representation1 = interaction.Inputsymbol();
+        String representation1 = interaction.inputsymbol();
         Player player1 = new Player(representation1);
         view.j2();
-        String representation2 = interaction.Inputsymbol();
+        String representation2 = interaction.inputsymbol();
         Player player2 = new Player(representation2);
 
         TicTacToe ticTacToe = new TicTacToe(3, player1, player2);
