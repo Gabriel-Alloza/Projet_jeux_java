@@ -8,18 +8,26 @@ public class View {
 
     }
 
+    /**
+     *
+     * @param size
+     * @param cells
+     * @param longsize
+     */
+
+    //Affiche le tableau à partir de cells
     public void displayBoard(int size, Cell[][] cells, int longsize){
-        InteractionUtilisateur interaction = new InteractionUtilisateur();
+        //On initialise des str vides pour pouvoir y rajouter des caractères en boucle.
         String dispalyedCells = "";
         String separation = "";
 
         for (int i = 0; i<= longsize; i++){
-            separation = separation+"----";
+            separation = separation+"----"; //Séparation entre les lignes
         }
         for (int i = 0; i<size; i++){
             System.out.println(separation);
             for (int j = 0; j< longsize; j++){
-                dispalyedCells = dispalyedCells + "|" + cells[i][j].getRepresentation();
+                dispalyedCells = dispalyedCells + "|" + cells[i][j].getRepresentation(); //Séparations entre les cases
             }
             dispalyedCells += "|";
             System.out.println(dispalyedCells);

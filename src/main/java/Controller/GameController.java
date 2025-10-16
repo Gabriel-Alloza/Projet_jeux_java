@@ -10,11 +10,24 @@ public class GameController {
 
     }
 
+    /**
+     *
+     * @param longueur
+     * @param cells
+     * @param largeur
+     */
     public void displayBoard(int longueur, Cell[][] cells, int largeur){
         View view = new View();
         view.displayBoard(longueur, cells, largeur);
     }
 
+    /**
+     *
+     * @param taille
+     * @param cells
+     * @param player
+     * @return
+     */
     public boolean getMove(int taille, Cell[][] cells, Player player){
         InteractionUtilisateur interaction = new InteractionUtilisateur();
         return interaction.getMove(taille, cells, player);
@@ -43,6 +56,16 @@ public class GameController {
     public void mauvaiseSaisie(){
         View view = new View();
         view.mauvaiseSaisie();
+    }
+
+    public void choixP4(){
+        View view = new View();
+        view.choixP4();
+    }
+
+    public int inputInteger(){
+        InteractionUtilisateur interaction = new InteractionUtilisateur();
+        return interaction.inputInteger();
     }
 
 }
