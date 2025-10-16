@@ -18,7 +18,7 @@ public class Main {
         TicTacToe ticTacToe = new TicTacToe(3, player1, player2);
         Puissance4 puissance4 = new Puissance4(6, 7,player1, player2);
 
-        //puissance4.play(player1, player2);
+        puissance4.play(player1, player2);
         ticTacToe.play();
     }
 }
