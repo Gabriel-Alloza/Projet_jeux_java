@@ -1,5 +1,4 @@
 package Model;
-import View.View;
 import Controller.GameController;
 
 public class TicTacToe {
