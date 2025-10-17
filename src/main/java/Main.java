@@ -5,6 +5,10 @@ import View.View;
 import View.InteractionUtilisateur;
 
 public class Main {
+    /**
+     * Constructeur de la classe
+     * @param args
+     */
     public static void main(String[] args) {
         InteractionUtilisateur interaction = new InteractionUtilisateur();
         View view = new View();
@@ -14,7 +18,7 @@ public class Main {
         String representation1 = interaction.inputsymbol();
         Player player1 = new Player(representation1);
 
-        //Même chose pour le player2 (ui pourra ou non être artificiel)
+        //Même chose pour le player2 (qui pourra ou non être artificiel)
         view.j2();
         String representation2 = interaction.inputsymbol();
         Player player2 = new Player(representation2);

@@ -7,21 +7,29 @@ public class Cell {
     /**
      *
      * @param representation
+     *
+     * Constructueur de la classe
      */
     public Cell(String representation) {
         this.representation = representation; //Attribue une représentation, (un contenu), à la case
     }
 
+    /**
+     * Affiche le contenu de la case
+     * @return
+     */
     public  String getRepresentation(){
-        return representation; //Premet d'afficher le contenu de la case
+        return representation;
     }
 
     /**
      *
      * @param representation
+     *
+     * Permet de changer le contenu de la case.
      */
     public  void setRepresentation(String representation){
-        this.representation = representation; //Permet de changer le contenu de la case.
+        this.representation = representation;
     }
 
 

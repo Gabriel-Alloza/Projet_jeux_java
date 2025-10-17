@@ -16,8 +16,10 @@ public class InteractionUtilisateur {
      * @param cells
      * @param player
      * @return
+     *
+     * Prend la case ou l'utilisasteur joue, renvoie un booléen pour indiquer si la case est libre ou non, et remplie la case.
+     * Utilisé uniquement avec tictactoe.
      */
-    //Prend la case ou l'utilisasteur joue, renvoie un booléen pour indiquer si la case est libre ou non, et remplie la case. Utilisé uniquement avec tictactoe.
     public boolean getMove(int size, Cell[][] cells, Player player){
         View view = new View();
         Scanner sc = new Scanner(System.in);
@@ -63,7 +65,10 @@ public class InteractionUtilisateur {
         return false;
     }
 
-    //Demande à l'utilisateur si il veut joueur en PVP ou PVE et renvoie la réponse.
+    /**
+     * Demande à l'utilisateur si il veut joueur en PVP ou PVE et renvoie la réponse.
+     * @return
+     */
     public String play(){
         View view = new View();
         Scanner sc = new Scanner(System.in);
@@ -74,14 +79,21 @@ public class InteractionUtilisateur {
         return choice;
     }
 
-    //Demande à l'tilisateur le symbol qu'il veut utiliser pour la partie et le renvoie.
+    /**
+     * Demande à l'tilisateur le symbol qu'il veut utiliser pour la partie et le renvoie.
+     * @return
+     */
     public String inputsymbol(){
         Scanner sc = new Scanner(System.in);
         String symbol = sc.nextLine();
         return " " + symbol + " ";
     }
 
-    //Demande à l'utilisateur de saisir un nombre entier, et teste s'il ne le fait pas.
+
+    /**
+     * Demande à l'utilisateur de saisir un nombre entier, et teste s'il ne le fait pas.
+     * @return
+     */
     public int inputInteger(){
         Scanner sc = new Scanner(System.in);
         if(sc.hasNextInt()){

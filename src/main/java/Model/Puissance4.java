@@ -17,6 +17,8 @@ public class Puissance4 {
      * @param longueur
      * @param player1
      * @param player2
+     *
+     * Constructueur de la classe
      */
 
     public Puissance4(int size, int longueur, Player player1, Player player2){
@@ -36,12 +38,19 @@ public class Puissance4 {
         }
     }
 
+    /**
+     * Affiche le tableau
+     */
 
     public void displayBoard(){
         GameController gameController = new GameController();
-        gameController.displayBoard(this.size, this.cells, this.longueur); //Affichage du tableau
+        gameController.displayBoard(this.size, this.cells, this.longueur);
     }
 
+    /**
+     * Teste si une condition de victoire a été atteinte
+     * @return
+     */
 
     public boolean hasWon(){
 
@@ -111,6 +120,8 @@ public class Puissance4 {
      *
      * @param player1
      * @param player2
+     *
+     * Fait tourner le jeu
      */
     public void play(Player player1, Player player2){
         GameController gameController = new GameController();

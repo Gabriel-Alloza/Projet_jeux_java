@@ -13,6 +13,8 @@ public class TicTacToe {
      * @param size
      * @param player1
      * @param player2
+     *
+     * Constructeur de la classe
      */
     public TicTacToe(int size, Player player1, Player player2){
 
@@ -27,19 +29,28 @@ public class TicTacToe {
         }
     }
 
-    //Affiche le tableau
+    /**
+     * Affiche le tableau
+     */
     public void display(){
        GameController gameController = new GameController();
         gameController.displayBoard(this.size, this.cells, this.size);
     }
 
-    //Prend la décision d'un joueur, le booléen indique si l'entrée est correcte ou non.
+    /**
+     * Prend la décision d'un joueur, le booléen indique si l'entrée est correcte ou non.
+     * @param player
+     * @return
+     */
     public boolean getMoveFromPlayer(Player player){
         GameController gameController = new GameController();
         return gameController.getMove(this.size, this.cells, player);
     }
 
-    //Vérifie si es conditions de victoires sont remplies ou non.
+    /**
+     * Vérifie si les conditions de victoires sont remplies ou non.
+     * @return
+     */
     public boolean isOver(){
 
         //colonnes
@@ -109,7 +120,9 @@ public class TicTacToe {
         return full;
     }
 
-
+    /**
+     * Fait tourner le jeu
+     */
     public void play(){
         GameController gameController = new GameController();
         boolean isOver = isOver();
