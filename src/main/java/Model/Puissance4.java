@@ -1,6 +1,4 @@
 package Model;
-import View.View;
-import View.InteractionUtilisateur;
 import Controller.GameController;
 
 public class Puissance4 {
