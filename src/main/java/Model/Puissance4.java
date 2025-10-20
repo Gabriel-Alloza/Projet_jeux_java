@@ -19,8 +19,20 @@ public class Puissance4 {
      * Constructueur de la classe
      */
 
-    public Puissance4(int size, int longueur, Player player1, Player player2){
+    public Puissance4(Integer size, Integer longueur, Player player1, Player player2){
+        if(longueur == null || longueur < 0){
+            throw new IllegalArgumentException("La longueur du tableau doit être un entier positif.");
+        }
+        if(size == null || size < 0){
+            throw new IllegalArgumentException("La largeur du tableau doit être un entier positif.");
+        }
 
+        if(player1.getRepresentation() == null || player1.getRepresentation().isBlank()){
+            throw new IllegalArgumentException("Les joueurs doivent avoir un signe");
+        }
+        if(player2.getRepresentation() == null || player2.getRepresentation().isBlank()){
+            throw new IllegalArgumentException("Les joueurs doivent avoir un signe");
+        }
 
         this.player1 = player1;
         this.player2 = player2;

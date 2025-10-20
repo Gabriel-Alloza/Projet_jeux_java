@@ -11,6 +11,9 @@ public class Cell {
      * Constructueur de la classe
      */
     public Cell(String representation) {
+        if(representation == null){
+            throw new IllegalArgumentException("La case ne peut pas rien contenir");
+        }
         this.representation = representation; //Attribue une représentation, (un contenu), à la case
     }
 

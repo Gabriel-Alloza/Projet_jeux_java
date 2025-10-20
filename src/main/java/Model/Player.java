@@ -9,6 +9,9 @@ public class Player {
      * @param representation
      */
     public Player(String representation){
+        if(representation == null || representation.isBlank()){
+            throw new IllegalArgumentException("Le signe ne peut pas être vide");
+        }
         this.representation = representation; //Attribue une representation (un symbole) au joueur
     }
 
