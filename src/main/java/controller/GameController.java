@@ -1,8 +1,8 @@
-package Controller;
-import Model.Cell;
-import View.View;
-import View.InteractionUtilisateur;
-import Model.Player;
+package controller;
+import model.Cell;
+import view.View;
+import view.InteractionUtilisateur;
+import model.Player;
 
 
 public class GameController {
@@ -12,11 +12,11 @@ public class GameController {
 
     /**
      *
-     * @param longueur
-     * @param cells
-     * @param largeur
+     *Affiche le tableau
+     * @param longueur longueur du tableau
+     * @param cells le tableau de cellules du jeu
+     * @param largeur largeur du tableau
      *
-     * Affiche le tableau
      */
     public void displayBoard(Integer longueur, Cell[][] cells, Integer largeur){
         if(longueur == null || longueur < 0){
@@ -35,13 +35,13 @@ public class GameController {
     }
 
     /**
-     *
-     * @param taille
-     * @param cells
-     * @param player
-     * @return
-     *
      * Prend le choix du joueur
+     *
+     * @param taille la taille de la grille
+     * @param cells le tableau de jeu
+     * @param player le joueur qui effectue le coup
+     * @return true si la case est invalide ou occupée, false sinon
+     *
      */
     public boolean getMove(int taille, Cell[][] cells, Player player){
         InteractionUtilisateur interaction = new InteractionUtilisateur();
@@ -50,7 +50,7 @@ public class GameController {
 
     /**
      * fait tourner le jeu (pour le tictactoe)
-     * @return
+     * @return Le choix du joueur (PVP, PVE ou EVE)
      */
     public String play(){
         InteractionUtilisateur interaction = new InteractionUtilisateur();
@@ -103,7 +103,7 @@ public class GameController {
 
     /**
      * Demande au joueur de rentrer un nombre entier.
-     * @return
+     * @return Un nombre entier choisi par l'utilisateur
      */
 
     public int inputInteger(){

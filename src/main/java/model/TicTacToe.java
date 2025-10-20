@@ -1,5 +1,5 @@
-package Model;
-import Controller.GameController;
+package model;
+import controller.GameController;
 
 public class TicTacToe {
     private int size;
@@ -8,12 +8,11 @@ public class TicTacToe {
     private Player player2;
 
     /**
-     *
-     * @param size
-     * @param player1
-     * @param player2
-     *
      * Constructeur de la classe
+     * @param size La taille de la grille
+     * @param player1 Le premier joueur à jouer
+     * @param player2 le deuxième joueur à jouer
+     *
      */
     public TicTacToe(Integer size, Player player1, Player player2){
 
@@ -48,8 +47,8 @@ public class TicTacToe {
 
     /**
      * Prend la décision d'un joueur, le booléen indique si l'entrée est correcte ou non.
-     * @param player
-     * @return
+     * @param player Joueur étant en train de jouer
+     * @return true si la case est invalide ou occupée, false sinon
      */
     public boolean getMoveFromPlayer(Player player){
         GameController gameController = new GameController();
@@ -58,7 +57,7 @@ public class TicTacToe {
 
     /**
      * Vérifie si les conditions de victoires sont remplies ou non.
-     * @return
+     * @return true si les conditions de victoire sont remplies, false sinon
      */
     public boolean isOver(){
 

@@ -1,8 +1,8 @@
-import Model.Player;
-import Model.Puissance4;
-import Model.TicTacToe;
-import View.View;
-import View.InteractionUtilisateur;
+import model.Player;
+import model.Puissance4;
+import model.TicTacToe;
+import view.View;
+import view.InteractionUtilisateur;
 
 public class Main {
     /**
@@ -15,12 +15,12 @@ public class Main {
 
         //Attribue un signe choisit par l'utilisateur au player 1
         view.j1();
-        String representation1 = interaction.inputsymbol();
+        String representation1 = interaction.inputSymbol();
         Player player1 = new Player(representation1);
 
         //Même chose pour le player2 (qui pourra ou non être artificiel)
         view.j2();
-        String representation2 = interaction.inputsymbol();
+        String representation2 = interaction.inputSymbol();
         Player player2 = new Player(representation2);
 
         //Lance un jeu de tictactoe
@@ -28,7 +28,7 @@ public class Main {
         ticTacToe.play();
 
         //Lace un jeu de puissance4 4.
-        Puissance4 puissance4 = new Puissance4(6, 7,player1, player2);
+        Puissance4 puissance4 = new Puissance4(6, 7, player1, player2);
         puissance4.play(player1, player2);
 
 

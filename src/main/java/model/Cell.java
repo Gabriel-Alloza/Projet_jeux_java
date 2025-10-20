@@ -1,14 +1,13 @@
-package Model;
+package model;
 
 public class Cell {
 
     private String representation;
 
     /**
-     *
-     * @param representation
-     *
      * Constructueur de la classe
+     * @param representation Contenu visuel de la case
+     *
      */
     public Cell(String representation) {
         if(representation == null){
@@ -19,17 +18,16 @@ public class Cell {
 
     /**
      * Affiche le contenu de la case
-     * @return
+     * @return Le contenu de la case
      */
     public  String getRepresentation(){
         return representation;
     }
 
     /**
-     *
-     * @param representation
-     *
      * Permet de changer le contenu de la case.
+     * @param representation Une chaîne de caractères sensée être le nouveau contenu de la case.
+     *
      */
     public  void setRepresentation(String representation){
         this.representation = representation;

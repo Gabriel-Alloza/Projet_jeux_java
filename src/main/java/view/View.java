@@ -1,6 +1,6 @@
-package View;
+package view;
 
-import Model.Cell;
+import model.Cell;
 
 public class View {
     /**
@@ -12,12 +12,11 @@ public class View {
     }
 
     /**
-     *
-     * @param size
-     * @param cells
-     * @param longsize
-     *
      * Affiche le tableau
+     * @param size largeur du tableau
+     * @param cells tableau de cellules du jeu
+     * @param longsize longeur du tableau
+     *
      */
 
     public void displayBoard(int size, Cell[][] cells, int longsize){

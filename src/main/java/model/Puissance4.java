@@ -1,5 +1,5 @@
-package Model;
-import Controller.GameController;
+package model;
+import controller.GameController;
 
 public class Puissance4 {
 
@@ -10,13 +10,12 @@ public class Puissance4 {
     private Player player2;
 
     /**
-     *
-     * @param size
-     * @param longueur
-     * @param player1
-     * @param player2
-     *
      * Constructueur de la classe
+     * @param size largeur du tableau
+     * @param longueur longueur du tableau
+     * @param player1 Premier jouer à ouer
+     * @param player2 deuxième joueur à jouer.
+     *
      */
 
     public Puissance4(Integer size, Integer longueur, Player player1, Player player2){
@@ -59,7 +58,7 @@ public class Puissance4 {
 
     /**
      * Teste si une condition de victoire a été atteinte
-     * @return
+     * @return true si une condition de victoire est vraie, false sinon.
      */
 
     public boolean hasWon(){
@@ -127,11 +126,10 @@ public class Puissance4 {
     }
 
     /**
+     *Fait tourner le jeu
+     * @param player1 Le premier joueur qui joue
+     * @param player2 Le deuxième joueur qui joue.
      *
-     * @param player1
-     * @param player2
-     *
-     * Fait tourner le jeu
      */
     public void play(Player player1, Player player2){
         GameController gameController = new GameController();

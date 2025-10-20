@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class Player {
 
@@ -6,7 +6,7 @@ public class Player {
 
     /**
      * Constructeur de la classe
-     * @param representation
+     * @param representation Le symbole du joueur.
      */
     public Player(String representation){
         if(representation == null || representation.isBlank()){
@@ -17,7 +17,7 @@ public class Player {
 
     /**
      * Renvoie la représentation, (le symbole) du joueur
-     * @return
+     * @return le symbole du joueur
      */
 
     public String getRepresentation(){
