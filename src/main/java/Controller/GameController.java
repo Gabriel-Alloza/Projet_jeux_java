@@ -18,7 +18,18 @@ public class GameController {
      *
      * Affiche le tableau
      */
-    public void displayBoard(int longueur, Cell[][] cells, int largeur){
+    public void displayBoard(Integer longueur, Cell[][] cells, Integer largeur){
+        if(longueur == null || longueur < 0){
+            throw new IllegalArgumentException("La longueur du tableau doit être un entier positif.");
+        }
+        if(largeur == null || largeur < 0){
+            throw new IllegalArgumentException("La largeur du tableau doit être un entier positif.");
+        }
+
+        if(cells == null){
+            throw new IllegalArgumentException("Un tableau doit être entré en paramètres.");
+        }
+
         View view = new View();
         view.displayBoard(longueur, cells, largeur);
     }

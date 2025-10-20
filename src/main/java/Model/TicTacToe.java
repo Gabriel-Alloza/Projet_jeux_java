@@ -15,10 +15,20 @@ public class TicTacToe {
      *
      * Constructeur de la classe
      */
-    public TicTacToe(int size, Player player1, Player player2){
+    public TicTacToe(Integer size, Player player1, Player player2){
 
+        if(player1.getRepresentation() == null || player1.getRepresentation().isBlank()){
+            throw new IllegalArgumentException("Les joueurs doivent avoir un signe");
+        }
+        if(player2.getRepresentation() == null || player2.getRepresentation().isBlank()){
+            throw new IllegalArgumentException("Les joueurs doivent avoir un signe");
+        }
         this.player1 = player1;
         this.player2 = player2;
+
+        if(size == null || size < 0){
+            throw new IllegalArgumentException("La taille du tableau doit être un entier positif.");
+        }
         this.size = size;
         this.cells = new Cell[this.size][this.size]; //Remplissage du tableau
         for(int i = 0; i < this.size; i++){
